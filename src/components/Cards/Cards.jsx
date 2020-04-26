@@ -23,16 +23,18 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Infected
             </Typography>
-            <CountUp
-              start={0}
-              end={confirmed.value}
-              duration={2.5}
-              separator=","
-            />
+            <Typography variant="h5" component="h2">
+              <CountUp
+                start={0}
+                end={confirmed.value}
+                duration={2.5}
+                separator=","
+              />
+            </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" component="p">
               Number of active cases of COVID-19
             </Typography>
           </CardContent>
@@ -48,16 +50,18 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Recovered
             </Typography>
-            <CountUp
-              start={0}
-              end={recovered.value}
-              duration={2.5}
-              separator=","
-            />
+            <Typography variant="h5" component="h2">
+              <CountUp
+                start={0}
+                end={recovered.value}
+                duration={2.5}
+                separator=","
+              />
+            </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">
+            <Typography variant="body2" component="p">
               Number of recoveries from COVID-19
             </Typography>
           </CardContent>
@@ -73,17 +77,19 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Deaths
             </Typography>
-            <CountUp
-              start={0}
-              end={deaths.value}
-              duration={2.5}
-              separator=","
-            />
+            <Typography variant="h5" component="h2">
+              <CountUp
+                start={0}
+                end={deaths.value}
+                duration={2.5}
+                separator=","
+              />
+            </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">
-              Number of deaths from COVID-19
+            <Typography variant="body2" component="p">
+              Number of deaths caused by COVID-19
             </Typography>
           </CardContent>
         </Grid>
